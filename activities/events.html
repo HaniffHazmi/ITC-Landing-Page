@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UTHM IT Club | Events</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .event h2 {
+      color: #007bff;
+    }
+    .event p, .event ul {
+      color: #6c757d;
+    }
+    .event ul {
+      padding-left: 1rem;
+    }
+    .event .date-location {
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
+    .bg-light-alt {
+      background-color: #f8f9fa;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <section class="py-5 text-center bg-light">
+    <div class="container">
+      <h1 class="display-5 text-primary">Events by UTHM IT Club</h1>
+      <p class="text-secondary">Explore our past and upcoming activities, from career expos to sports and tech runs!</p>
+    </div>
+  </section>
+
+  <section class="event py-5 border-bottom">
+    <div class="container">
+        <img src="/assets/techmech.jpeg" alt="TechMech Sprint 2025 Banner" class="img-fluid rounded mb-4">
+        <h2>TechMech Sprint 2025</h2>
+      <p>
+        Not just a run — it's a fusion of stamina, tech, and spirit! Open to public and UTHM students.
+      </p>
+      <p><strong>🏁 Categories & Fees:</strong></p>
+      <ul>
+        <li><strong>21KM Half Marathon:</strong> RM85 (UTHM) | RM90 (Public) — T-Shirt, Medal, Bib, Finisher Tee, Trophy (Top 3)</li>
+        <li><strong>5KM Fun Run:</strong> RM50 (UTHM) | RM55 (Public) — T-Shirt & Medal</li>
+        <li>Medal Only Options available from RM15</li>
+      </ul>
+      <p class="date-location">
+        📅 Date: 21 JUNE 2025<br>
+        🕒 Time: 3:00 AM – 10:00 AM<br>
+        📍 Venue: Padang Kawad, UTHM
+      </p>
+      <p>🔗 <a href="http://t2u.asia/e/42752" target="_blank">Register now</a> — early birds get discount with code <strong>TechMecha@ITC25</strong></p>
+    </div>
+  </section>
+
+  <section class="event py-5 border-bottom bg-light-alt">
+    <div class="container">
+        <img src="/assets/careerx.jpg" alt="CareerX Fest 2025" class="img-fluid rounded mb-4">
+      <h2>CareerX Fest 2025 & Innovation Carnival</h2>
+      <p>
+        Jointly organized by HEPA FSKTM and ITC, this career expo brought companies to Dewan Sultan Ibrahim to offer internship opportunities. Also featured: the <strong>Innovation Carnival FSKTM 2025</strong> — a student tech project showcase.
+      </p>
+      <p class="date-location">
+        📅 Date: 20 - 22 MEI 2025<br>
+        📍 Venue: Dewan Sultan Ibrahim, UTHM
+      </p>
+    </div>
+  </section>
+
+  <section class="event py-5 border-bottom">
+    <div class="container">
+        <img src="/assets/showdown.jpg" alt="Badminton Competition" class="img-fluid rounded mb-4">
+      <h2>Ctrl + Smash Showdown 2025</h2>
+      <p>
+        A badminton competition open to FSKTM students — show your talent and sportsmanship in this fun competitive atmosphere!
+      </p>
+      <ul>
+        <li>🏸 Categories: Singles & Doubles (Men, Women, Mixed)</li>
+        <li>🏆 Prizes and SAF 2025 representation for winners</li>
+        <li>📍 Location: UTHM Badminton Hall</li>
+        <li>📅 Date: 28 MAY 2025</li>
+      </ul>
+      <p class="text-secondary small">Participation is limited. All participants must fill out the registration form accurately.</p>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    fetch('/partials/navbar.html')
+      .then((res) => res.text())
+      .then((data) => (document.getElementById('navbar-placeholder').innerHTML = data));
+
+    fetch('/partials/footer.html')
+      .then((res) => res.text())
+      .then((data) => (document.getElementById('footer-placeholder').innerHTML = data));
+  </script>
+</body>
+</html>

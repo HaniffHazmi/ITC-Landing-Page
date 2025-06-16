@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UTHM IT Club | Tutorials</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    h2 {
+      color: #007bff;
+    }
+    p, .card-text, li {
+      color: #6c757d;
+    }
+    .section {
+      padding: 60px 0;
+    }
+    .card h5 {
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <section class="section text-center bg-light">
+    <div class="container">
+      <h1 class="display-5 text-primary">Tutorial Resources</h1>
+      <p class="text-secondary">Official guides, video playlists, and free learning materials to support your tech journey.</p>
+    </div>
+  </section>
+
+  <!-- Getting Started Guides -->
+  <section class="section">
+    <div class="container">
+      <h2 class="mb-4">Getting Started Guides</h2>
+      <ul>
+        <li><strong>HTML/CSS/JS:</strong> <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a></li>
+        <li><strong>Python:</strong> <a href="https://docs.python.org/3/" target="_blank">Python.org Docs</a></li>
+        <li><strong>Java:</strong> <a href="https://docs.oracle.com/en/java/" target="_blank">Oracle Docs</a></li>
+        <li><strong>Flutter:</strong> <a href="https://docs.flutter.dev/" target="_blank">Flutter Official Docs</a></li>
+        <li><strong>Laravel:</strong> <a href="https://laravel.com/docs" target="_blank">Laravel Docs</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- YouTube Tutorials -->
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="mb-4">YouTube Playlists</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Flutter Firebase CRUD</h5>
+              <p class="card-text">Learn to build real-world mobile apps using Flutter and Firebase.</p>
+              <a href="https://youtube.com/playlist?list=PL4cUxeGkcC9j--TKIdkb3ISfRbJeJYQwC&si=HwKx-tp8KVZBV5gg" class="btn btn-outline-primary">Watch Playlist</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">VSCode Tips</h5>
+              <p class="card-text">Boost your productivity with helpful extensions and shortcuts.</p>
+              <a href="#" class="btn btn-outline-primary">Watch Playlist</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Git & GitHub Basics</h5>
+              <p class="card-text">Understand version control and how to use GitHub effectively.</p>
+              <a href="#" class="btn btn-outline-primary">Watch Playlist</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">MySQL Crash Course</h5>
+              <p class="card-text">A beginner-friendly guide to MySQL, from setup to querying data.</p>
+              <a href="https://www.youtube.com/watch?v=9ylj9NR0Lcg" class="btn btn-outline-primary" target="_blank">Watch Playlist</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Android Studio Basics</h5>
+              <p class="card-text">Set up and build your first Android app with Java or Kotlin.</p>
+              <a href="https://www.youtube.com/playlist?list=PLlxmoA0rQ-Lw6tAs2fGFuXGP13-dWdKsB" class="btn btn-outline-primary" target="_blank">Watch Playlist</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Free PDF Books -->
+  <section class="section">
+    <div class="container">
+      <h2 class="mb-4">Free PDF Books</h2>
+      <ul>
+        <li><strong>Eloquent JavaScript:</strong> <a href="https://eloquentjavascript.net/" target="_blank">Read Online</a></li>
+        <li><strong>Automate the Boring Stuff with Python:</strong> <a href="https://automatetheboringstuff.com/" target="_blank">Read Online</a></li>
+        <li><strong>Think Java:</strong> <a href="https://greenteapress.com/wp/think-java/" target="_blank">Download PDF</a></li>
+        <li><strong>Go Programming Language:</strong> <a href="https://www.gopl.io/" target="_blank">Read Online</a></li>
+        <li><strong>Pro C# 10 with .NET 6:</strong> <a href="https://link.springer.com/book/10.1007/978-1-4842-7478-2" target="_blank">Download PDF (Springer)</a></li>
+        <li><strong>You Don't Know JS (Book Series):</strong> <a href="https://github.com/getify/You-Dont-Know-JS" target="_blank">View on GitHub</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    fetch('/partials/navbar.html')
+      .then((res) => res.text())
+      .then((data) => (document.getElementById('navbar-placeholder').innerHTML = data));
+
+    fetch('/partials/footer.html')
+      .then((res) => res.text())
+      .then((data) => (document.getElementById('footer-placeholder').innerHTML = data));
+  </script>
+</body>
+</html>
