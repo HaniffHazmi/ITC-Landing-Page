@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materials Library | UTHM IT Club</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    h2 {
+      color: #007bff;
+    }
+    .card-title {
+      color: #007bff;
+    }
+    .card-text {
+      color: #6c757d;
+    }
+    .section {
+      padding: 60px 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="mb-4">Available Study Resources</h2>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Data Structures Notes (PDF)</h5>
+              <p class="card-text">Comprehensive lecture notes on stacks, queues, trees, and more.</p>
+              <a href="/materials/data-structures.pdf" class="btn btn-primary" download>Download</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Past Year Exam - Web Programming</h5>
+              <p class="card-text">Real exam questions to test your skills and prepare efficiently.</p>
+              <a href="/materials/web-programming-pastyear.pdf" class="btn btn-primary" download>Download</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Past Year Exam - Data Science</h5>
+              <p class="card-text">Collections of past year exam for Data Science subjects.</p>
+              <a href="/materials/web-programming-pastyear.pdf" class="btn btn-primary" download>Download</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more cards as needed -->
+
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    fetch('/partials/navbar.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('navbar-placeholder').innerHTML = data);
+
+    fetch('/partials/footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+</body>
+</html>
