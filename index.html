@@ -18,28 +18,210 @@
     }
 
     .hero {
-      background: linear-gradient(
-          rgba(0, 123, 255, 0.6),
-          rgba(0, 123, 255, 0.6)
-        ),
-        url('assets/hero-banner.jpg') center/cover no-repeat;
+      position: relative;
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #4a90e2 100%);
+      /* Replace the above gradient with your image:
+         background: url('assets/hero-banner.jpg') center/cover no-repeat;
+      */
       color: white;
-      padding: 100px 0;
+      padding: 120px 0;
       text-align: center;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(173, 216, 230, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(135, 206, 250, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(176, 224, 230, 0.2) 0%, transparent 50%);
+      animation: fogFloat 20s ease-in-out infinite;
+      z-index: 1;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 60% 70%, rgba(100, 149, 237, 0.25) 0%, transparent 40%),
+        radial-gradient(circle at 90% 60%, rgba(70, 130, 180, 0.35) 0%, transparent 45%),
+        radial-gradient(circle at 10% 30%, rgba(123, 191, 250, 0.3) 0%, transparent 35%);
+      animation: fogFloat 25s ease-in-out infinite reverse;
+      z-index: 1;
+    }
+
+    @keyframes fogFloat {
+      0%, 100% {
+        transform: translateX(0) translateY(0) scale(1);
+        opacity: 0.7;
+      }
+      25% {
+        transform: translateX(-20px) translateY(-10px) scale(1.1);
+        opacity: 0.8;
+      }
+      50% {
+        transform: translateX(20px) translateY(10px) scale(0.9);
+        opacity: 0.6;
+      }
+      75% {
+        transform: translateX(-10px) translateY(15px) scale(1.05);
+        opacity: 0.9;
+      }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      backdrop-filter: blur(1px);
+      padding: 40px;
+      border-radius: 20px;
+      background: rgba(30, 60, 114, 0.15);
+      border: 1px solid rgba(135, 206, 250, 0.3);
+      box-shadow: 0 8px 32px rgba(30, 60, 114, 0.2);
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .hero .lead {
+      font-size: 1.4rem;
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      animation: fadeInUp 1s ease-out 0.3s both;
+    }
+
+    .btn-cta {
+      background: linear-gradient(45deg, #007bff, #0056b3);
+      color: white;
+      border: none;
+      padding: 15px 40px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 50px;
+      box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+      transition: all 0.3s ease;
+      animation: fadeInUp 1s ease-out 0.6s both;
+    }
+
+    .btn-cta:hover {
+      background: linear-gradient(45deg, #0056b3, #004085);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(0, 123, 255, 0.4);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .floating-particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .particle {
+      position: absolute;
+      background: rgba(173, 216, 230, 0.8);
+      border-radius: 50%;
+      animation: float 15s infinite linear;
+      box-shadow: 0 0 10px rgba(135, 206, 250, 0.6);
+    }
+
+    .particle:nth-child(1) {
+      width: 6px;
+      height: 6px;
+      left: 10%;
+      animation-delay: 0s;
+      animation-duration: 20s;
+    }
+
+    .particle:nth-child(2) {
+      width: 4px;
+      height: 4px;
+      left: 20%;
+      animation-delay: 2s;
+      animation-duration: 18s;
+    }
+
+    .particle:nth-child(3) {
+      width: 8px;
+      height: 8px;
+      left: 30%;
+      animation-delay: 4s;
+      animation-duration: 22s;
+    }
+
+    .particle:nth-child(4) {
+      width: 5px;
+      height: 5px;
+      left: 50%;
+      animation-delay: 6s;
+      animation-duration: 19s;
+    }
+
+    .particle:nth-child(5) {
+      width: 7px;
+      height: 7px;
+      left: 70%;
+      animation-delay: 8s;
+      animation-duration: 21s;
+    }
+
+    .particle:nth-child(6) {
+      width: 3px;
+      height: 3px;
+      left: 80%;
+      animation-delay: 10s;
+      animation-duration: 17s;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+      }
     }
 
     .section-title {
       color: #343a40;
-    }
-
-    .btn-cta {
-      background-color: #007bff;
-      color: white;
-      border: none;
-    }
-
-    .btn-cta:hover {
-      background-color: #0056b3;
     }
 
     .card-title {
@@ -64,6 +246,21 @@
     .bg-light {
       background-color: #f8f9fa !important;
     }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .hero .lead {
+        font-size: 1.2rem;
+      }
+      
+      .hero-content {
+        padding: 30px 20px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -72,10 +269,22 @@
 
   <!-- Hero Section -->
   <section class="hero">
+    <!-- Floating particles for extra ambiance -->
+    <div class="floating-particles">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+    
     <div class="container">
-      <h1 class="display-4 fw-bold">Welcome to UTHM ITC Club</h1>
-      <p class="lead">Empowering students through technology, teamwork, and innovation.</p>
-      <a href="/about/join.html" class="btn btn-cta mt-3">Join Us Now</a>
+      <div class="hero-content">
+        <h1 class="display-4 fw-bold">Welcome to UTHM ITC Club</h1>
+        <p class="lead">Empowering students through technology, teamwork, and innovation.</p>
+        <a href="/about/join.html" class="btn btn-cta mt-3">Join Us Now</a>
+      </div>
     </div>
   </section>
 
